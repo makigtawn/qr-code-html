@@ -1,0 +1,101 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-slate-300: hsl(212, 45%, 89%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(218, 44%, 22%);
+
+  --font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-slate-300);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  color: var(--color-slate-500);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 1.25rem; /* 20px */
+  padding: 1rem 1rem 2.5rem 1rem; /* 16px 16px 40px 16px */
+  max-width: 20rem; /* 320px */
+  width: 100%;
+  box-shadow: 0 1.5625rem 1.5625rem rgba(0, 0, 0, 0.0477), 0 0.625rem 1.25rem rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.875rem 2rem rgba(0, 0, 0, 0.08), 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.625rem; /* 10px */
+  display: block;
+}
+
+.card__content {
+  padding: 1.5rem 0.75rem 0; /* 24px top, 12px horizontal */
+}
+
+.card__title {
+  color: var(--color-slate-900);
+  font-size: 1.3125rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem; /* 16px */
+}
+
+.card__description {
+  color: var(--color-slate-500);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--color-slate-500);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
